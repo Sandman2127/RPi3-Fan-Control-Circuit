@@ -7,9 +7,12 @@ This script was intended as an automated Fan Control system for the Raspberry Pi
 The program senses temperature of the processor by reading the constantly updated file /sys/class/thermal/thermal_zone0/temp in short time intervals.
 
 ### Circuit Details:
+
+![Fan Circuit](https://sandman2127.github.io/images/FAN_RPi_circuit_sim.png)
+
 [Circuit Details and Simulation](https://sandman2127.github.io/design/Pi_Fan_Proj/)
 
-#### Description
+### Circuit Description:
 - The circuit is a common-emitter amplifier with an NPN 2222A by Fairchild:
 - We feed the base of the transistor with ~8 mA using a 3.3V output from the [RPi3 pin 37](https://docs.microsoft.com/en-us/windows/iot-core/learn-about-hardware/pinmappings/pinmappingsrpi) through a 470 Ohm resistor. This setup pushes the transistor base current flow (3.3V/470Ohm = ~7 mA) halfway to RPi3's pin saturation (16 mA)
 - The max output current of a gpio pin is 16 mA calculated here: http://www.thebox.myzen.co.uk/Raspberry/Understanding_Outputs.html
