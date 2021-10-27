@@ -19,12 +19,17 @@ The program senses temperature of the processor by reading the constantly update
 - My fan can accept up to a 12V power source across the leads forcing a current flow of up to 200 mA 
 
 ### Usage
-To run automatically add these lines to the bottom of your ~/.bashrc
+To run automatically add these lines to the bottom of your ~/.bashrc:
 ```
 # use python2.7:
 /path/to/RPi.GPIO/python /path/to/RPi3_temp_control/RPi3_temp_regulator.py & 
 ```
+Activate:
+```
+source ~/.bashrc
+```
 
+The cpu cooling fan should now be under active regulation!
 
 
 
